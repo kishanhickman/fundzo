@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+      @font-face {
+        font-family: OutfitThin;
+        src: url('./assets/fonts/Outfit-Thin.ttf');
+      }
+      @font-face {
+        font-family: OutfitMedium;
+        src: url('./assets/fonts/Outfit-Medium.ttf');
+      }
+      @font-face {
+        font-family: OutfitSemiBold;
+        src: url('./assets/fonts/Outfit-SemiBold.ttf');
+      }
+      @font-face {
+        font-family: OutfitBold;
+        src: url('./assets/fonts/Outfit-Bold.ttf');
+      }
+}
+
+@layer components {
+  .navbar {
+    @apply px-4 bg-base-100;
+  }
+  footer {
+    @apply bg-base-content text-base-100;
+  }
+  form input {
+    @apply rounded-lg mb-4 block w-full border border-base-300 bg-base-200 placeholder-neutral
+    focus:outline-none focus:ring-0 focus:border-primary font-normal text-base;
+  }
+  form input[type='text'], form input[type='password'], form input[type='email'], form input[type='file'] {
+    @apply px-4 py-3 font-normal text-base;
+  }
+  form select {
+    @apply select select-bordered rounded-lg mt-1 mb-4 w-full px-3 py-2 border border-base-300 bg-base-200 placeholder-neutral 
+    focus:outline-none focus:ring-0 focus:border-primary font-normal text-base;
+  }
+  form label {
+    @apply block mb-3; 
+  }
+  form textarea {
+    @apply rounded-lg mt-1 mb-4 block w-full px-4 py-3 border border-base-300 bg-base-200 placeholder-neutral
+    focus:outline-none focus:ring-0 focus:border-primary;
+  }
+  .btn {
+    @apply capitalize font-normal text-base;
+  }
+  .btn-primary, .btn-error, .btn-warning, .btn-accent {
+    @apply text-base-100;
+  }
+  .btn-base-content {
+    @apply bg-base-content text-base-100;
+  }
+  .btn-base-300 {
+    @apply bg-base-300 text-base-content border-base-300 hover:text-base-100 focus:text-base-100;
+  }
+  .container {
+    @apply px-4 mx-auto;
+  }
+  .card {
+    @apply border border-base-300 mb-4 rounded-lg bg-base-100;
+  }
+  .border-t {
+    @apply border-base-300;
+  }
+  .border-b {
+    @apply border-base-300;
+  }
+  .input-block {
+    @apply border-b mb-5;
+  }
+  .drawer {
+    @apply h-full;
+  }
+  .drawer-content {
+    @apply max-h-full overflow-hidden !important;
+  }
+  .drawer-side {
+    @apply max-h-full !important;
+  }
+  .drawer-side .active {
+    @apply bg-base-100 border-l-4 border-l-primary-focus text-base-content !important;
+  }
+  .menu li a.active {
+    @apply bg-primary text-base-100;
+  }
+  .menu li button {
+    @apply bg-base-200 hover:bg-base-300 active:text-base-100 active:bg-primary-focus;
+  }
+}

@@ -1,0 +1,1961 @@
+{
+	"info": {
+		"_postman_id": "ca1deb4c-0d0d-41c3-85ce-be266ed5257f",
+		"name": "Unit testing - Controllers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Address",
+					"item": [
+						{
+							"name": "Get all addresses",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var addressId = pm.response.json()[0];\r",
+											"\r",
+											"pm.environment.set(\"addressId\", addressId.id);\r",
+											"\r",
+											"pm.test(\"Status code is 200.\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Content-Type is JSON.\", function () {\r",
+											"    pm.response.to.be.json;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/Admin/Address/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"Admin",
+										"Address",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get address by id",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200.\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Content-Type is JSON.\", function () {\r",
+											"    pm.response.to.be.json;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/Admin/Address/{{addressId}}",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"Admin",
+										"Address",
+										"{{addressId}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Category",
+					"item": [
+						{
+							"name": "Get all categories",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var categoryId = pm.response.json()[0];\r",
+											"\r",
+											"pm.environment.set(\"categoryId\", categoryId.id);\r",
+											"\r",
+											"pm.test(\"Status code is 200.\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Content-Type is JSON.\", function () {\r",
+											"    pm.response.to.be.json;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/Admin/Category/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"Admin",
+										"Category",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get category by id",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200.\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Content-Type is JSON.\", function () {\r",
+											"    pm.response.to.be.json;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/Admin/Category/{{categoryId}}",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"Admin",
+										"Category",
+										"{{categoryId}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Country",
+					"item": [
+						{
+							"name": "Get all countries",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var countryId = pm.response.json()[0];\r",
+											"\r",
+											"pm.environment.set(\"countryId\", countryId.id);\r",
+											"\r",
+											"pm.test(\"Status code is 200.\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Content-Type is JSON.\", function () {\r",
+											"    pm.response.to.be.json;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/Admin/Country/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"Admin",
+										"Country",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get country by id",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"\r",
+											"pm.test(\"Status code is 200.\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Content-Type is JSON.\", function () {\r",
+											"    pm.response.to.be.json;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/Admin/Country/{{countryId}}",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"Admin",
+										"Country",
+										"{{countryId}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Currency",
+					"item": [
+						{
+							"name": "Get all currencies",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var currencyId = pm.response.json()[0];\r",
+											"\r",
+											"pm.environment.set(\"currencyId\", currencyId.id);\r",
+											"\r",
+											"pm.test(\"Status code is 200.\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Content-Type is JSON.\", function () {\r",
+											"    pm.response.to.be.json;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/Admin/Currency/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"Admin",
+										"Currency",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get currency by id",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200.\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Content-Type is JSON.\", function () {\r",
+											"    pm.response.to.be.json;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/Admin/Currency/{{currencyId}}",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"Admin",
+										"Currency",
+										"{{currencyId}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Industry",
+					"item": [
+						{
+							"name": "Get all industries",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var industryId = pm.response.json()[0];\r",
+											"\r",
+											"pm.environment.set(\"industryId\", industryId.id);\r",
+											"\r",
+											"pm.test(\"Status code is 200.\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Content-Type is JSON.\", function () {\r",
+											"    pm.response.to.be.json;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/Admin/Industry/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"Admin",
+										"Industry",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get industry by id",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200.\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Content-Type is JSON.\", function () {\r",
+											"    pm.response.to.be.json;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/Admin/Industry/{{industryId}}",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"Admin",
+										"Industry",
+										"{{industryId}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Organisation",
+					"item": [
+						{
+							"name": "Get all organisations",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var organisationId = pm.response.json()[0];\r",
+											"\r",
+											"pm.environment.set(\"organisationId\", organisationId.id);\r",
+											"\r",
+											"pm.test(\"Status code is 200.\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Content-Type is JSON.\", function () {\r",
+											"    pm.response.to.be.json;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/Admin/Organisation/",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"Admin",
+										"Organisation",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get organisation by id",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200.\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Content-Type is JSON.\", function () {\r",
+											"    pm.response.to.be.json;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/Admin/Organisation/{{organisationId}}",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"Admin",
+										"Organisation",
+										"{{organisationId}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get all user groups",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var userGroupId = pm.response.json()[0];\r",
+									"\r",
+									"pm.environment.set(\"userGroupId\", userGroupId.id);\r",
+									"\r",
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/User/UserGroup/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"User",
+								"UserGroup",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user group by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/User/UserGroup/{{userGroupId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"User",
+								"UserGroup",
+								"{{userGroupId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all user statuses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var userStatusId = pm.response.json()[0];\r",
+									"\r",
+									"pm.environment.set(\"userStatusId\", userStatusId.id);\r",
+									"\r",
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/User/UserStatus/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"User",
+								"UserStatus",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user status by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/User/UserStatus/{{userStatusId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"User",
+								"UserStatus",
+								"{{userStatusId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var userId = pm.response.json();\r",
+									"\r",
+									"pm.environment.set(\"userId\", userId.id);\r",
+									"\r",
+									"pm.test(\"Successful POST request, status code 200.\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Smith\",\r\n  \"displayName\": \"JS\",\r\n  \"email\": \"js@gmail.com\",\r\n  \"addressId\": {{addressId}},\r\n  \"phoneNumber\": \"1234567\",\r\n  \"password\": \"1234\",\r\n  \"userGroupId\": {{userGroupId}},\r\n  \"userStatusId\": {{userStatusId}},\r\n  \"organisationId\": {{organisationId}}\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/User",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"User"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/User/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"User",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Did user get created?",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/User/{{userId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"User",
+								"{{userId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request, status code 200.\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Smith\",\r\n  \"displayName\": \"JS\",\r\n  \"email\": \"johnsmith@gmail.com\",\r\n  \"addressId\": 2,\r\n  \"phoneNumber\": \"1234567\",\r\n  \"password\": \"1234\",\r\n  \"userGroupId\": 1,\r\n  \"userStatusId\": 1,\r\n  \"organisationId\": 1\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/User/{{userId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"User",
+								"{{userId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Did user get updated?",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/User/{{userId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"User",
+								"{{userId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request, status code 200.\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/User/{{userId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"User",
+								"{{userId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Did user get deleted?",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404.\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/User{{userId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"User{{userId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Fundraiser",
+			"item": [
+				{
+					"name": "Create new fundraiser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var fundraiserId = pm.response.json();\r",
+									"\r",
+									"pm.environment.set(\"fundraiserId\", fundraiserId.id);\r",
+									"\r",
+									"pm.test(\"Successful POST request, status code 200.\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"name\": \"Test fundraiser\",\r\n    \"description\": \"Test description\",\r\n    \"goalAmount\": 1000,\r\n    \"fundraiserTypeId\": 1,\r\n    \"categoryId\": {{categoryId}},\r\n    \"fundraiserStatusId\": 1,\r\n    \"userId\": {{userId}} \r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/Fundraiser/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Fundraiser",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all fundraisers",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Fundraiser/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Fundraiser",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Did fundraiser get created?",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Fundraiser/{{fundraiserId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Fundraiser",
+								"{{fundraiserId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update fundraiser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request, status code 200.\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{  \r\n    \"name\": \"Test fundraiser\",\r\n    \"description\": \"Test description\",\r\n    \"goalAmount\": 3000,\r\n    \"fundraiserTypeId\": 1,\r\n    \"categoryId\": {{categoryId}},\r\n    \"fundraiserStatusId\": 1,\r\n    \"userId\": {{userId}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Fundraiser/{{fundraiserId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Fundraiser",
+								"{{fundraiserId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Did fundraiser get updated?",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Fundraiser/{{fundraiserId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Fundraiser",
+								"{{fundraiserId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete fundraiser",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request, status code 200.\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Fundraiser/{{fundraiserId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Fundraiser",
+								"{{fundraiserId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Did fundraiser get deleted?",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404.\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Fundraiser/{{fundraiserId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Fundraiser",
+								"{{fundraiserId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Donation",
+			"item": [
+				{
+					"name": "Get all donation statuses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var donationStatusId = pm.response.json()[0];\r",
+									"\r",
+									"pm.environment.set(\"donationStatusId\", donationStatusId.id);\r",
+									"\r",
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Donation/DonationStatus/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Donation",
+								"DonationStatus",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get donation status by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Donation/DonationStatus/{{donationStatusId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Donation",
+								"DonationStatus",
+								"{{donationStatusId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new donation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var donationId = pm.response.json();\r",
+									"\r",
+									"pm.environment.set(\"donationId\", donationId.id);\r",
+									"\r",
+									"pm.test(\"Successful POST request, status code 200.\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"amount\": 100,\r\n  \"fundraiserId\": {{fundraiserId}},\r\n  \"userId\": {{userId}},\r\n  \"currencyId\": {{currencyId}},\r\n  \"statusId\": {{donationStatusId}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Donation",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Donation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all donations",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Donation/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Donation",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Did donation get created?",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Donation/{{donationId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Donation",
+								"{{donationId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update donation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request, status code 200.\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"amount\": 300,\r\n  \"fundraiserId\": {{fundraiserId}},\r\n  \"userId\": {{userId}},\r\n  \"currencyId\": {{currencyId}},\r\n  \"statusId\": {{donationStatusId}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Donation/{{donationId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Donation",
+								"{{donationId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Did donation get updated?",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Donation/{{donationId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Donation",
+								"{{donationId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete donation",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request, status code 200.\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Donation/{{donationId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Donation",
+								"{{donationId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Did donation get deleted?",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404.\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Donation/{{donationId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Donation",
+								"{{donationId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "Get all payment methods",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var paymentMethodId = pm.response.json()[0];\r",
+									"\r",
+									"pm.environment.set(\"paymentMethodId\", paymentMethodId.id);\r",
+									"\r",
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Payment/PaymentMethod/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Payment",
+								"PaymentMethod",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get payment method by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Payment/PaymentMethod/{{paymentMethodId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Payment",
+								"PaymentMethod",
+								"{{paymentMethodId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all payment statuses",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var paymentStatusId = pm.response.json()[0];\r",
+									"\r",
+									"pm.environment.set(\"paymentStatusId\", paymentStatusId.id);\r",
+									"\r",
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Payment/PaymentStatus/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Payment",
+								"PaymentStatus",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get payment status by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Payment/PaymentStatus/{{paymentStatusId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Payment",
+								"PaymentStatus",
+								"{{paymentStatusId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create new payment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var paymentId = pm.response.json();\r",
+									"\r",
+									"pm.environment.set(\"paymentId\", paymentId.id);\r",
+									"\r",
+									"pm.test(\"Successful POST request, status code 200.\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"amount\": 10000,\r\n  \"currencyCode\": \"ISK\",\r\n  \"userId\": {{userId}},\r\n  \"paymentMethodId\": {{paymentMethodId}},\r\n  \"paymentStatusId\": {{paymentStatusId}},\r\n  \"donationId\": {{donationId}},\r\n  \"currencyId\": {{currencyId}}\r\n}"
+						},
+						"url": {
+							"raw": "{{URL}}/Payment/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Payment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all payments",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Payment/",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Payment",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Did payment get created?",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Payment/{{paymentId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Payment",
+								"{{paymentId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update payment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful PUT request, status code 200.\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"amount\": 30000,\r\n  \"currencyCode\": \"ISK\",\r\n  \"userId\": {{userId}},\r\n  \"paymentMethodId\": {{paymentMethodId}},\r\n  \"paymentStatusId\": {{paymentStatusId}},\r\n  \"donationId\": {{donationId}},\r\n  \"currencyId\": {{currencyId}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/Payment/{{paymentId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Payment",
+								"{{paymentId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Did payment get updated?",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200.\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Content-Type is JSON.\", function () {\r",
+									"    pm.response.to.be.json;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Payment/{{paymentId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Payment",
+								"{{paymentId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete payment",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Successful DELETE request, status code 200.\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Payment/{{paymentId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Payment",
+								"{{paymentId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Did payment get deleted?",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404.\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/Payment/{{paymentId}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"Payment",
+								"{{paymentId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}
